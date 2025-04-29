@@ -1,6 +1,6 @@
 {
   "name": "bad-word-checker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "it check bad words in texts",
   "main": "./src/index.js",
   "type": "module",
@@ -11,10 +11,29 @@
     "bad-word",
     "bad-word",
     "bad-word-checker",
-    "bad-word-detector"
+    "bad-word-detector",
+    "Bad Word Filter",
+    "Profanity Filter",
+    "Censorship Tool",
+    "Inappropriate Language Detector",
+    "Text Filter",
+    "Swear Word Detector",
+    "Text Censorship",
+    "Content Moderation",
+    "Profanity Checker",
+    "Bad Word Detection",
+    "Profanity Detection API",
+    "Offensive Language Filter",
+    "Text Sanitizer",
+    "Profanity Removal",
+    "Bad Language Filter"
   ],
   "author": "Aurpit",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitbhatia23/bad_work_cheker.git"
+  },
   "devDependencies": {
     "chai": "^5.2.0",
     "mocha": "^11.1.0"
