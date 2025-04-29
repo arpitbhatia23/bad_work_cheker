@@ -54,7 +54,7 @@ export default class BadWords {
       escapeRegExp(word)
     );
 
-    const regex = new RegExp(`(?:${escapedWords.join("|")})\\b`, "giu");
+    const regex = new RegExp(`(?:${escapedWords.join("|")})`, "giu");
 
     // Replace bad words with the mask character (e.g., "*")
     return text.replace(regex, (match) => maskChar.repeat(match.length));

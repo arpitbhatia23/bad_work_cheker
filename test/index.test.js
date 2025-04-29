@@ -52,9 +52,9 @@ describe("BadWords Class", () => {
   });
 
   it("should clean bad words with custom mask character", () => {
-    const text = "You are stupid";
+    const text = "You are पोरकिस्तान";
     const cleaned = badWordsInstance.cleanWords(text, "#");
-    expect(cleaned).to.equal("You are ######");
+    expect(cleaned).to.equal("You are ##########");
   });
 
   it("should return same text if no bad words are present", () => {
