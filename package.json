@@ -1,0 +1,22 @@
+{
+  "name": "bad-word-checker",
+  "version": "1.0.0",
+  "description": "it check bad words in texts",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "bad-word",
+    "bad-word",
+    "bad-word-checker",
+    "bad-word-detector"
+  ],
+  "author": "Aurpit",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
+  }
+}
