@@ -16,7 +16,7 @@ export default class BadWords {
       escapeRegExp(word)
     );
 
-    const regex = new RegExp(`(?:${escapedWords.join("|")})\\b`, "giu");
+    const regex = new RegExp(`(?:${escapedWords.join("|")})`, "giu");
     const result = regex.test(text.toLowerCase());
     return result;
   }

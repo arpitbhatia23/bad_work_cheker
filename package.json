@@ -1,6 +1,6 @@
 {
   "name": "bad-word-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "it check bad words in texts",
   "main": "./src/index.js",
   "type": "module",
