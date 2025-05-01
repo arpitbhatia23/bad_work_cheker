@@ -1,5 +1,23 @@
 import defaultBadWords from "./badword.js";
 import badwords from "./hindibadword.js";
+const map = {
+  a: "[a@4]",
+  b: "[b8]",
+  c: "[c(]",
+  d: "[d]",
+  e: "[e3]",
+  f: "[f]",
+  g: "[g9]",
+  h: "[h#]",
+  i: "[i1!|]",
+  l: "[l1|]",
+  n: "[n]",
+  o: "[o0@]",
+  s: "[s5$]",
+  t: "[t+7]",
+  u: "[uµ]",
+  k: "[k]",
+};
 export default class BadWords {
   constructor(customWords = []) {
     this.badWords = new Set([...defaultBadWords, ...badwords, ...customWords]);

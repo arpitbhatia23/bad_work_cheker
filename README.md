@@ -1,29 +1,32 @@
-# BadWords
+# 🛑 BadWords
 
-A comprehensive JavaScript package for detecting, counting, and filtering profane or inappropriate words in text content, with support for both English and Hindi bad words.
+A comprehensive JavaScript package for detecting, counting, and filtering profane or inappropriate words in text content. Supports both **English** and **Hindi** bad words out of the box.
 
-## Features
+[![npm version](https://img.shields.io/npm/v/bad-word-checker.svg)](https://www.npmjs.com/package/bad-word-checker)
+[![npm downloads](https://img.shields.io/npm/dm/bad-word-checker.svg)](https://www.npmjs.com/package/bad-word-checker)
+[![license](https://img.shields.io/github/license/arpitbhatia23/bad_work_cheker.svg)](https://github.com/arpitbhatia23/bad_work_cheker/blob/main/LICENSE)
 
-- Detect the presence of bad words in a text string
-- Count the number of bad words in text
-- Extract bad words from text
-- Add custom words to the bad words list
-- Remove words from the bad words list
-- Check if a specific word is considered inappropriate
-- Clean/mask bad words in text with a custom character
+## 🌟 Why choose bad-word-checker?
 
-## Installation
+- 🔍 **Accurate Detection**: Precisely identifies inappropriate language
+- 🌐 **Multilingual Support**: Built-in support for both English and Hindi profanity
+- ⚙️ **Customizable**: Easily add or remove words from the detection list
+- 🛡️ **Content Protection**: Keep your application's content clean and appropriate
+- 🚀 **Simple API**: Easy to integrate with minimal configuration
+- 🔧 **Lightweight**: Zero dependencies, minimal impact on your bundle size
+
+## 📦 Installation
 
 ```bash
-npm install badwords-filter
+npm install bad-word-checker
 ```
 
-## Usage
+## 🚀 Usage
 
 ### Basic Usage
 
 ```javascript
-import BadWords from "badwords-filter";
+import BadWords from "bad-word-checker";
 
 // Initialize with default bad words (English and Hindi)
 const badWordsFilter = new BadWords();
@@ -76,7 +79,7 @@ const cleanText = badWordsFilter.cleanWords(
 console.log(cleanText); // "This text has some ### #####"
 ```
 
-## API Reference
+## 📚 API Reference
 
 ### Constructor
 
@@ -132,10 +135,85 @@ Replaces all bad words in the text with the specified mask character.
 - `maskChar`: Character used to mask bad words (default: "\*")
 - Returns: `string`
 
-## License
+## 🔍 Use Cases
+
+- **Chat Applications**: Filter inappropriate messages
+- **User Comments**: Moderate user-generated content
+- **Social Media**: Detect and censor offensive language
+- **Children's Applications**: Ensure content remains age-appropriate
+- **Content Management Systems**: Automate content moderation
+- **Forums & Message Boards**: Maintain community standards
+
+## 📝 Examples
+
+### Filtering User Input
+
+```javascript
+import BadWords from "bad-word-checker";
+
+function handleUserSubmit(userContent) {
+  const filter = new BadWords();
+
+  if (filter.detect(userContent)) {
+    return {
+      success: false,
+      message: "Please remove inappropriate language",
+      badWordsCount: filter.countBadWords(userContent),
+    };
+  }
+
+  return {
+    success: true,
+    content: userContent,
+  };
+}
+```
+
+### Creating a Comment Moderation System
+
+```javascript
+import BadWords from "bad-word-checker";
+
+class CommentModerator {
+  constructor() {
+    this.filter = new BadWords();
+    // Add application-specific words
+    this.filter.addWords(["unwanted", "custom", "terms"]);
+  }
+
+  moderateComment(comment) {
+    // Replace bad words with asterisks
+    return this.filter.cleanWords(comment);
+  }
+
+  validateComment(comment) {
+    const badWordsList = this.filter.getBadWordsFromText(comment);
+
+    if (badWordsList.length > 0) {
+      return {
+        valid: false,
+        reason: "Contains inappropriate words",
+        words: badWordsList,
+      };
+    }
+
+    return { valid: true };
+  }
+}
+```
+
+## 📋 License
 
 MIT
 
-## Contributing
+## 👨‍💻 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Made with ❤️ for content moderation
