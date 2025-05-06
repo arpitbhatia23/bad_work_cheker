@@ -1,6 +1,6 @@
 {
   "name": "bad-word-checker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A comprehensive JavaScript package for detecting, counting, and filtering profane or inappropriate words in text content, with support for both English and Hindi bad words",
   "main": "./src/index.js",
   "type": "module",
